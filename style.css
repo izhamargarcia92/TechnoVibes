@@ -1,0 +1,107 @@
+/* TechnoVibes style */
+:root{
+  --bg1: #0b1020;
+  --bg2: #071024;
+  --accent1: #ff61d8; /* pink/lilac */
+  --accent2: #6ea8ff; /* neon blue */
+  --glass: rgba(255,255,255,0.04);
+  --card: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(102,51,153,0.12), transparent),
+              linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:#eaf0ff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  overflow-x:hidden;
+}
+
+/* Container */
+.container{max-width:1100px;margin:0 auto;padding:28px}
+
+/* header */
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;background:linear-gradient(180deg, rgba(2,6,23,0.55), rgba(2,6,23,0.15));backdrop-filter:blur(6px);z-index:40;border-bottom:1px solid rgba(255,255,255,0.03);padding:16px}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),#7a5bff,var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:800;color:#041028;transform:rotate(-8deg);box-shadow:0 10px 30px rgba(122,91,255,0.12)}
+.titles h1{margin:0;font-size:20px;letter-spacing:0.6px}
+.subtitle{font-size:12px;color:rgba(234,240,255,0.6)}
+
+/* nav */
+.main-nav a{color:rgba(234,240,255,0.85);text-decoration:none;margin-left:14px;font-weight:600}
+.main-nav a:hover{color:var(--accent1);text-decoration:underline}
+
+/* particles */
+.particles{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.p{position:absolute;border-radius:999px;opacity:0.12;filter:blur(6px);animation: float 12s linear infinite}
+.p1{width:220px;height:220px;left:5%;top:10%;background:radial-gradient(circle,#ff61d8,#7a5bff)}
+.p2{width:160px;height:160px;left:75%;top:5%;background:radial-gradient(circle,#6ea8ff,#7a5bff);animation-duration:16s}
+.p3{width:100px;height:100px;left:40%;top:60%;background:radial-gradient(circle,#ff61d8,#6ea8ff);animation-duration:10s}
+.p4{width:140px;height:140px;left:82%;top:70%;background:radial-gradient(circle,#7a5bff,#00e0ff);animation-duration:22s}
+.p5{width:90px;height:90px;left:15%;top:75%;background:radial-gradient(circle,#ff61d8,#ff9eea);animation-duration:18s}
+.p6{width:60px;height:60px;left:55%;top:25%;background:radial-gradient(circle,#6ea8ff,#7a5bff);animation-duration:9s}
+.p7{width:120px;height:120px;left:60%;top:85%;background:radial-gradient(circle,#ff61d8,#7a5bff);animation-duration:14s}
+.p8{width:70px;height:70px;left:30%;top:30%;background:radial-gradient(circle,#6ea8ff,#00d4ff);animation-duration:20s}
+.p9{width:40px;height:40px;left:88%;top:40%;background:radial-gradient(circle,#ff61d8,#ffd6f6);animation-duration:11s}
+
+@keyframes float{
+  0%{transform:translateY(0) translateX(0)}
+  50%{transform:translateY(-30px) translateX(30px)}
+  100%{transform:translateY(0) translateX(0)}
+}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;padding:48px 0;position:relative;z-index:5}
+.hero-inner h2{font-size:clamp(20px,4.6vw,36px);margin-bottom:8px;line-height:1.02}
+.hero-inner h2 span{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:rgba(234,240,255,0.9);margin-bottom:18px;max-width:620px}
+.hero-art{height:240px;border-radius:18px;background:linear-gradient(135deg, rgba(255,97,216,0.12), rgba(110,168,255,0.08));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.glow{width:200px;height:200px;border-radius:50%;background:radial-gradient(circle, rgba(255,97,216,0.25), transparent 40%);box-shadow:0 0 80px rgba(110,168,255,0.12);animation: pulse 4s ease-in-out infinite}
+@keyframes pulse{0%{transform:scale(0.92)}50%{transform:scale(1.06)}100%{transform:scale(0.92)}}
+
+/* sections */
+section{padding:40px 0;position:relative;z-index:5}
+.info p{max-width:900px;margin:auto;color:rgba(234,240,255,0.9)}
+.cards .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 26px rgba(0,0,0,0.5)}
+
+/* projects */
+.projects .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px}
+.tags{font-size:12px;color:rgba(234,240,255,0.7);margin-top:10px}
+
+/* team */
+.team-grid{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.member{width:220px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:12px;border-radius:12px;text-align:center;box-shadow:0 8px 20px rgba(0,0,0,0.4)}
+.member img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.member figcaption strong{display:block}
+.member figcaption span{display:block;font-size:13px;color:rgba(234,240,255,0.75)}
+
+/* contact & qr */
+.qr-area{display:flex;justify-content:center;margin-top:12px}
+.qr-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;text-align:center}
+.qr-card img{width:220px;height:220px;border-radius:10px;border:4px solid rgba(255,97,216,0.12)}
+
+/* footer */
+.site-footer{padding:20px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:40px;text-align:center;color:rgba(234,240,255,0.7)}
+
+/* buttons */
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;backdrop-filter:blur(4px)}
+.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#061028;box-shadow:0 10px 30px rgba(122,91,255,0.12)}
+.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:rgba(234,240,255,0.95)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:18px}
+  .cards .card-grid{grid-template-columns:1fr}
+  .projects .project-grid{grid-template-columns:1fr}
+  .member{width:46%}
+}
+@media (max-width:480px){
+  .member{width:100%}
+  .main-nav{display:none}
+}
